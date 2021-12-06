@@ -75,8 +75,10 @@ def pivotElement(array, stelle):
     ele = 0
     for i in range(1,y-1):
         #print(str(array[[i],[len(array)+1]]/array[[i],[stelle]]))
-        if ((array[[i],[len(array)+1]]/array[[i],[stelle]]) < mini):
-            mini =  array[[i],[len(array)+1]]/array[[i],[stelle]] 
+        if array[[i],[stelle]]!=0 and ((array[[i], [len(array) + 1]] / array[[i], [stelle]]) < mini):
+        #if ((array[[i],[len(array)+1]]/array[[i],[stelle]]) < mini):
+            mini =  array[[i],[len(array)+1]]/array[[i],[stelle]]
+
             ele = i
             #print("Mini:" +str(mini))
     #print("Spalte: "+str(stelle)+"   Zeile: "+str(ele))
